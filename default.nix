@@ -2,6 +2,9 @@
 pkgs.rustPlatform.buildRustPackage rec {
 	pname = "wol";
 	version = "0.1";
-	cargoLock.lockFile = ./Cargo.lock;
-	src = pkgs.lib.cleanSource ./.;
+	src = fetchFromGithub {
+		owner = erocks26
+		repo = wol
+		rev = version
+		hash = ;
 }
